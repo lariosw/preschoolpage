@@ -1,66 +1,379 @@
 <!doctype html>
-<html class="no-js" lang="">
-  <head>
-    <meta charset="utf-8">
-    <title>maplewood</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <html class="no-js" lang="" -->
+<head xmlns="http://www.w3.org/1999/html">
+  <meta charset="utf-8">
+  <title>maplewood</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-    <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="/bower_components/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+  <!-- build:js scripts/vendor/modernizr.js -->
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
 
-  </head>
-  <body>
-    
-
-
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+</head>
+<body>
+<!-- Top page navigation -->
+<div class="content-wrapper">
 
 
-    <!-- build:js(.) scripts/plugins.js -->
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
-    <!-- endbuild -->
+
+    <div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <div class="navbar-logo">
+            Maplewood Preschool
+          </div>
+
+        </div>
+        <div class="collapse navbar-collapse" id="js-navbar-collapse">
+
+          <ul class="nav navbar-nav">
+            <li> <a href="#/">Home</a></li>
+            <li> <a class="teachers" ng-href="#/about">Teachers</a></li>
+            <li> <a class="schedule" ng-href="#/">Schedule</a></li>
+            <li> <a class="tuition" ng-href="#/">Tuition</a></li>
+            <li> <a class="contact" ng-href="#/">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
 
-    <!-- build:js(.tmp) scripts/main.js -->
-    <script src="scripts/main.js"></script>
-    <!-- endbuild -->
+  <!--
+   <div class="homepage">
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
-  </body>
+     <div class="main-header">
+       <h1>
+        Maplewood Preschool
+       </h1>
+     </div>
+
+     <div class="top-nav">
+       <ul>
+         <li>
+           Home
+         </li>
+         <li>
+           Meet Our Teachers
+         </li>
+         <li>
+           Schedule & Calendar
+         </li>
+         <li>
+           Tuition & Class Options
+         </li>
+         <li>
+           Contact Us
+         </li>
+       </ul>
+     </div> -->
+
+  <div class="homepageCarousel">
+    <div id="cp_widget_422aae77-1ace-4a24-b3ff-136486d13231">...</div><script type="text/javascript">
+    var cpo = []; cpo["_object"] ="cp_widget_422aae77-1ace-4a24-b3ff-136486d13231"; cpo["_fid"] = "A8EAj2NtuxCf";
+    var _cpmp = _cpmp || []; _cpmp.push(cpo);
+    (function() { var cp = document.createElement("script"); cp.type = "text/javascript";
+      cp.async = true; cp.src = "//www.cincopa.com/media-platform/runtime/libasync.js";
+      var c = document.getElementsByTagName("script")[0];
+      c.parentNode.insertBefore(cp, c); })(); </script><noscript>Powered by Cincopa
+    <a href='https://www.cincopa.com/solution/enterprise'>Business Video</a> solution.
+    <div id="cp_widget_db1c8204-9192-4d00-87c9-45c4ac32117e">...</div>
+    <script type="text/javascript">
+      var cpo = []; cpo["_object"] ="cp_widget_db1c8204-9192-4d00-87c9-45c4ac32117e"; cpo["_fid"] = "A8EAj2NtuxCf";
+      var _cpmp = _cpmp || []; _cpmp.push(cpo);
+      (function() { var cp = document.createElement("script"); cp.type = "text/javascript";
+        cp.async = true; cp.src = "//www.cincopa.com/media-platform/runtime/libasync.js";
+        var c = document.getElementsByTagName("script")[0];
+        c.parentNode.insertBefore(cp, c); })(); </script>
+    <noscript>Powered by Cincopa <a href='https://www.cincopa.com/solution/enterprise'>Business Video</a> solution.<span>Maplewood preschool carousel</span><span>homepage carousel</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 1508</span><span>height</span><span> 921</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 1169</span><span>height</span><span> 1025</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 960</span><span>height</span><span> 720</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 960</span><span>height</span><span> 720</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 960</span><span>height</span><span> 960</span>
+    </noscript>
+  </div>
+
+  <div class="mission-wrapper">
+    <div class="missionStatement">
+      <p>Our mission is to provide a quality educational and social experience in a Christian environment and to
+        ensure that children are prepared to enter Kindergarten. We promote learning through work and play under
+        the guidance of qualified teachers.
+
+        The program at Maplewood Preschool balance academics and social development through art, music, large
+        muscle time, fine motor skills, field trips and community involvement.
+
+        Our program is designed to help children learn that God is part of their everyday lives. The curriculum
+        will reflect this through Bible stories, songs, chapel time, and with love and kindness in the classroom.</p>
+    </div>
+  </div>
+
+  <!--
+      <div class="social-links">
+        <div class="emailIcon">
+          <a href="">
+            <img src="images/emailIcon.jpeg" alt="email">
+          </a>
+        </div>
+
+          <a href="https://www.facebook.com/Nancnbarb/?fref=t">
+            <img src="images/" alt="church"</a>
+        </div>
+        <a href="https://www.facebook.com/Nancnbarb/?fref=ts">
+        <img src="images/facebookIcon.jpg" alt="facebook">
+      </a>
+
+        where the social links go
+      </div>
+    </div>
+-->
+
+  <div class="teachers">
+    <h1>
+      Meet Our Teachers
+    </h1>
+    <div class="nancyProfile">
+      <img src="images/teachernancy.jpg" alt="teacherNancy">
+      </a>
+      <div class="nancy-content">
+        <h4>Nancy Rasmussen
+          <br>
+          (Co-director and Co-teacher)</h4>
+
+        <p>Teacher Nancy has 15 years’ experience teaching
+          preschool, with 11 of them at Maplewood.
+          A graduate of WSU in Family Studies and Early
+          Childhood Education, she loves teaching preschool.
+          She is a member of Maplewood Presbyterian Church and the mother of two great kids.
+        </p>
+      </div>
+    </div>
+
+    <div class="barbProfile">
+      <img src="images/teacherbarb.jpg" alt="teacherBarb">
+      </a><img>
+
+      <div class="barb-content">
+        <h4>Barbara St. John
+          <br>
+          (Co-director and Co-teacher)</h4>
+
+        <p>Teacher Barbara has been working with children and active in Maplewood
+          for over 25 years.  She first worked as the Director of the Maplewood Daycare
+          and now as Co-director and Co-teacher of Maplewood Preschool.  Barbara has an
+          Early Childhood Certificate from Edmonds Community College.  She is a mother
+          to 5 and a grandmother to 11 wonderful grandchildren.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="schedule">
+    <h1>
+      Schedule & Calendar
+    </h1>
+    <h3>
+      Class begins at 9:00 am and ends at 12:00 noon.
+    </h3>
+    <div class="time-schedule">
+      <ul>
+        <li>
+          Circle Time
+        </li>
+        <li>
+          Academic Work
+        </li>
+        <li>
+          Enrichment Time
+          <br>(Art, Music, Science, Geography)
+        </li>
+        <li>
+          Snack
+          <br>(Healthy choices provided by preschool)
+        </li>
+        <li>
+          Outside Time
+        </li>
+        <li>
+          Ending Circle
+        </li>
+        <li>
+          Extended care lunch bunch runs from 12 pm to 1 pm.
+        </li>
+      </ul>
+    </div>
+    <div class="calendar">
+      <iframe src="https://calendar.google.com/calendar/embed?src=maplewoodpreschooledmonds%40gmail.com&ctz=America/Los_Angeles"
+              style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    </div>
+  </div>
+
+  <div class="tuition">
+    <h1>
+      Tuition & Class Options
+    </h1>
+    <h3>Our First Day of School is Wednesday September 7th, 2016</h3>
+
+    <div class="tuitionRates"
+         2015-2016 School Year
+         Monthly Tuition:
+    <ul>
+      <li>
+        3 days/week program: $220 per month
+      </li>
+      <li>
+        4 days/week program: $270 per month
+      </li>
+      <li>
+        5 days/week program: $ 310 per month
+      </li>
+    </ul>
+    <div class="classHours">
+      Classes run from 9:00 a.m. - 12:00 p.m.
+    </div>
+    <div class="dayExplanation">
+      Your student will experience many opportunities for learning during
+      his/her week at preschool.  Each day is geared to a specific theme,
+      letter and/or number.  During the day your student will explore the
+      theme through circle time, station time, academic work, art projects
+      and other activities.
+      The preschool program is specifically designed for the children in
+      attendance each day. Teacher Barbara works with the younger than pre-k
+      students.  Students who are pre-k will spend  class time with Teacher
+      Nancy preparing themselves for kindergarten.  Through the weekly theme
+      and letter, your student will develop a foundation of skills and be excited
+      and ready for their next educational experience.
+    </div>
+    <div class="extendedSchedule">
+      Extended Day
+
+      Monday - Friday
+
+      12:00pm until 1:00pm
+
+      $5 fee/day
+      <div class="extendedExplanation">
+        Your student will experience many opportunities for learning during
+        his/her week at preschool.  Each day is geared to a specific theme,
+        letter and/or number.  During the day your student will explore the
+        theme through circle time, station time, academic work, art projects
+        and other activities.
+        The preschool program is specifically designed for the children in
+        attendance each day. Teacher Barbara works with the younger than pre-k
+        students.  Students who are pre-k will spend  class time with Teacher
+        Nancy preparing themselves for kindergarten.  Through the weekly theme
+        and letter, your student will develop a foundation of skills and be excited
+        and ready for their next educational experience.
+
+        This program add-on is designed for the student to have additional time and
+        fun with their preschool friends. This time is for lunch (parent provided)
+        as well as outdoor activities and enrichment time in a less formal, fun atmosphere.
+      </div>
+      <div class="registrationInfo">
+        To register for any of our programs, please call (425)-778-5248 Ext. 5
+
+        For your convenience, there is a copy of the registration form available online. You
+        may complete the form, print it, sign it and bring it in when you register your child
+        for classes.
+
+        Monthly Tuition is due in full on the first day of each month.
+        Lunch bunch may be paid on arrival on the desired day or in advance with your monthly tuition.
+      </div>
+    </div>
+  </div>
+
+  <div class="contact">
+    <h1>
+      Contact Us
+    </h1>
+    <div class="inquiries">
+      <h3>
+        Inquiries
+      </h3>
+    </div>
+    <div class="address">
+      We are located at
+      19523 84th Avenue W
+      Edmonds, WA  98026
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2678.91055788428!2d-122.34809994928149!3d47.82195077909745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54901ad095b9be1b%3A0xad6a740d6a7d44f2!2sMaplewood+Preschool!5e0!3m2!1sen!2sus!4v1483434783609"
+                width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="Phone">
+      Phone:(425)-778-5248 Ext. 5
+    </div>
+    <div class="email">
+      Preschool@Maplewoodpres.org
+    </div>
+    <div class="socialLinks">
+      <ul>
+        <li>
+          facebook
+        </li>
+        <li>
+          instagram
+        </li>
+      </ul>
+    </div>
+    <div class="maplePresChurch">
+      <a href="http://www.maplewoodpres.org/">
+        <img src="images/maplewoodPresIcon.png" alt="church">
+      </a>
+    </div>
+  </div>
+
+  <footer>
+
+  </footer>
+</div>
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+
+<!-- build:js(.) scripts/plugins.js -->
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+<!-- endbuild -->
+
+
+<!-- build:js(.tmp) scripts/main.js -->
+<script src="scripts/main.js"></script>
+<!-- endbuild -->
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='https://www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+  ga('create','UA-XXXXX-X');ga('send','pageview');
+</script>
+</body>
 </html>

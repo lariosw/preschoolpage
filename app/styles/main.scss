@@ -91,3 +91,161 @@ body {
     border-bottom: 0;
   }
 }
+
+.navbar{
+  .navbar-nav {
+    /*margin-top:50px;*/
+  }
+  .navbar-logo{
+    background-color: green;
+    width: 250px;
+    max-width: 300px;
+    margin-right: 482px;
+    padding-top: 8px;
+  font-size: 150%;
+    height: 50px;
+    word-break: normal;
+  }
+}
+
+.navbar-header {
+  max-width: 1500px;
+
+}
+
+.container {
+  max-width: 1500px;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  background-color: purple;
+}
+
+.navbar-nav li {
+  float: right;
+  background-color: #5e5c5c;
+  .nav li {
+    display: inline;
+    list-style: none;
+    margin: 10px
+  }
+}
+
+.navbar .container {
+  margin-right:0 !important;
+  margin-left: 0 !important;
+}
+
+
+
+
+
+body {
+  padding-top: 0px !important;
+}
+.homepage .main-header h1 {
+margin: 30px 30px;
+}
+
+/**.header {
+  margin: 0 !important;
+}
+.container {
+  margin: 0 !important;
+}
+.navbar-nav li {
+  background-color: #5e5c5c;
+  float: right;
+  .nav li {
+    display: inline;
+    list-style: none;
+    margin: 10px;
+
+  }
+}
+
+.navbar-header {
+  background-color: deepskyblue;
+  width: 275px;
+  height: 150px;
+  font-height: 10px;
+  float: left;
+}
+*/
+
+
+.missionStatement {
+  clear: both;
+  margin: 5px 275px;
+  color: cornflowerblue;
+  text-align: justify;
+  padding: 15px;
+}
+
+.mission-wrapper {
+  background-color: black;
+}
+
+.homepageCarousel {
+  min-width: 100%;
+  max-width: 60%;
+}
+
+.teachers h1 {
+  margin: 0 auto;
+  width: 400px;
+}
+
+.nancyProfile {
+  width: 400px;
+  float: left;
+  margin-left: 150px;
+  text-align: justify;
+  .nancy-content {
+    width: 350px;
+    height: 200px;
+    background-color: #EDEDED;
+    h4 {
+      margin: 0;
+      text-align: center;
+    }
+  }
+}
+
+.barbProfile {
+  width: 400px;
+  float: right;
+  margin-right: 150px;
+  text-align: justify;
+  .barb-content {
+    width: 350px;
+    height: 200px;
+    background-color: #EDEDED;
+    h4 {
+      margin: 0;
+      text-align: center;
+    }
+  }
+}
+div.schedule {
+  clear: both;
+    margin: 0 auto;
+    width: 400px;
+  h3 {
+
+  }
+  .time-schedule {
+    margin: 0 auto;
+    width: 600px;
+    ul li {
+      list-style: none;
+      text-align: center;
+      margin: 5px;
+    }
+  }
+}
+
+.tuition h1{
+  margin: 0 auto;
+  width: 400px;
+}
+
