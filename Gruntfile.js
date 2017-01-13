@@ -30,6 +30,21 @@ module.exports = function (grunt) {
     // Project settings
     config: config,
 
+    htmlrender: {
+      build: {
+        options: {
+          src: ['<%= config.app %>/pages/*.html', '<%= config.app %>/index.html']
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= config.app %>',
+          src: ['index.html'],
+          dest: '.tmp',
+          ext: '.html'
+        }]
+      },
+    },
+
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       bower: {
@@ -54,6 +69,10 @@ module.exports = function (grunt) {
       styles: {
         files: ['<%= config.app %>/styles/{,*/}*.css'],
         tasks: ['newer:copy:styles', 'postcss']
+      },
+      htmlRender: {
+        files: ['<%= config.app %>/pages/{,*/}*.html', '<%= config.app %>/index.html'],
+        tasks: ['htmlrender']
       }
     },
 
@@ -68,7 +87,7 @@ module.exports = function (grunt) {
       livereload: {
         options: {
           files: [
-            '<%= config.app %>/{,*/}*.html',
+            '.tmp/index.html',
             '.tmp/styles/{,*/}*.css',
             '<%= config.app %>/images/{,*/}*',
             '.tmp/scripts/{,*/}*.js'
@@ -390,6 +409,7 @@ module.exports = function (grunt) {
   });
 
 
+
   grunt.registerTask('serve', 'start the server and preview your app', function (target) {
 
     if (target === 'dist') {
@@ -398,6 +418,7 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
+      'htmlrender',
       'wiredep',
       'concurrent:server',
       'postcss',
