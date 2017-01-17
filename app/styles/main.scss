@@ -4,6 +4,8 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+//Global Styles
+$main-color: green;
 
 //Page Specific Styles
 @import "contact";
@@ -12,7 +14,134 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 @import "teachers";
 @import "tuition";
 
-//Global Styles
+
+/* to do remove */
+
+.missionStatement {
+  clear: both;
+  margin: 5px 275px;
+  color: cornflowerblue;
+  text-align: justify;
+  padding: 15px;
+}
+
+.mission-wrapper {
+  background-color: black;
+}
+
+.homepageCarousel {
+  min-width: 100%;
+  max-width: 60%;
+}
+
+.teachers h1 {
+  margin: 0 auto;
+  width: 400px;
+}
+
+.nancyProfile {
+  width: 400px;
+  float: left;
+  margin-left: 150px;
+  text-align: justify;
+  .nancy-content {
+    width: 350px;
+    height: 200px;
+    background-color: #EDEDED;
+    h4 {
+      margin: 0;
+      text-align: center;
+    }
+  }
+}
+
+.barbProfile {
+  width: 400px;
+  float: right;
+  margin-right: 150px;
+  text-align: justify;
+  .barb-content {
+    width: 350px;
+    height: 200px;
+    background-color: #EDEDED;
+    h4 {
+      margin: 0;
+      text-align: center;
+    }
+  }
+}
+div.schedule {
+  clear: both;
+  margin: 0 auto;
+  width: 400px;
+  h1 {
+    float: left;
+  }
+
+  div.time-schedule {
+    width: 600px;
+    h3 {
+      clear: both;
+    }
+    ul li {
+      list-style: none !important;
+      text-align: center;
+      margin: 5px;
+    }
+  }
+}
+
+.calendar {
+
+}
+
+.tuition {
+  clear: both;
+}
+h1{
+  margin: 0 auto;
+  width: 400px;
+}
+
+.Rates {
+  border: 2px solid black;
+  width: 400px;
+  ul li {
+
+    list-style: none;
+  }
+}
+
+.classHours {
+  font-size: 20px;
+}
+.dailyMore {
+  font-weight: 500;
+}
+
+.dayExplanation {
+  border: 2px solid black;
+  width: 600px;
+}
+
+.extendedSchedule {
+  font-size: 20px;
+}
+
+.extendedMore {
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.extendedExplanation {
+  border: 2px solid black;
+  width: 600px;
+}
+
+.registrationInfo {
+  margin-top: 20px;
+  text-align: center;
+}
 
 
 /*
@@ -184,83 +313,3 @@ margin: 30px 30px;
 }
 */
 
-
-.missionStatement {
-  clear: both;
-  margin: 5px 275px;
-  color: cornflowerblue;
-  text-align: justify;
-  padding: 15px;
-}
-
-.mission-wrapper {
-  background-color: black;
-}
-
-.homepageCarousel {
-  min-width: 100%;
-  max-width: 60%;
-}
-
-.teachers h1 {
-  margin: 0 auto;
-  width: 400px;
-}
-
-.nancyProfile {
-  width: 400px;
-  float: left;
-  margin-left: 150px;
-  text-align: justify;
-  .nancy-content {
-    width: 350px;
-    height: 200px;
-    background-color: #EDEDED;
-    h4 {
-      margin: 0;
-      text-align: center;
-    }
-  }
-}
-
-.barbProfile {
-  width: 400px;
-  float: right;
-  margin-right: 150px;
-  text-align: justify;
-  .barb-content {
-    width: 350px;
-    height: 200px;
-    background-color: #EDEDED;
-    h4 {
-      margin: 0;
-      text-align: center;
-    }
-  }
-}
-div.schedule {
-  clear: both;
-    margin: 0 auto;
-    width: 400px;
-  h3 {
-
-  }
-  .time-schedule {
-    margin: 0 auto;
-    width: 600px;
-      ul li {
-        list-style: none;
-        text-align: center;
-        margin: 5px;
-      }
-  }
-}
-
-.tuition h1{
-  margin: 0 auto;
-  width: 400px;
-}
-
-.tuitionRates {
-
-}
