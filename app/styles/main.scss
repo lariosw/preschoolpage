@@ -14,62 +14,51 @@ $main-color: green;
 @import "teachers";
 @import "tuition";
 
+.navbar {
+  background-color: #008080;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 0 !important;
+}
+.navbar-logo {
+  padding-left: 50px;
+  img {
+    padding-right: 10px;
+    width: 70px;
+    height: 50px;
+  }
+}
+
+.navbar-header {
+  padding: 10px;
+}
+.navbar-collapse {
+  /*background-color:  #00d6b2;
+  width: 850px;
+  margin-left: 50px;
+  padding-left: 50px;*/
+}
+.navbar-nav {
+  margin-left: 450px;
+  /*margin-bottom: 20px;*/
+  margin-top: -25px;
+  /*background-color: cornflowerblue;*/
+  /*box-shadow: 5px 5px 5px #888888;
+  border-radius: 25px;*/
+  padding: 7px;
+  font-size: 15px;
+  li a {
+    color: black !important;
+    font-weight: 500;
+  }
+}
+
+.content-wrapper {
+  margin: 0 200px;
+}
 
 /* to do remove */
 
-.missionStatement {
-  clear: both;
-  margin: 5px 275px;
-  color: cornflowerblue;
-  text-align: justify;
-  padding: 15px;
-}
-
-.mission-wrapper {
-  background-color: black;
-}
-
-.homepageCarousel {
-  min-width: 100%;
-  max-width: 60%;
-}
-
-.teachers h1 {
-  margin: 0 auto;
-  width: 400px;
-}
-
-.nancyProfile {
-  width: 400px;
-  float: left;
-  margin-left: 150px;
-  text-align: justify;
-  .nancy-content {
-    width: 350px;
-    height: 200px;
-    background-color: #EDEDED;
-    h4 {
-      margin: 0;
-      text-align: center;
-    }
-  }
-}
-
-.barbProfile {
-  width: 400px;
-  float: right;
-  margin-right: 150px;
-  text-align: justify;
-  .barb-content {
-    width: 350px;
-    height: 200px;
-    background-color: #EDEDED;
-    h4 {
-      margin: 0;
-      text-align: center;
-    }
-  }
-}
 div.schedule {
   clear: both;
   margin: 0 auto;

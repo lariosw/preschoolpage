@@ -1,3 +1,67 @@
 .section-teachers{
 
+  h1 {
+    color: #C7C7C7;
+    text-align: center;
+    border-bottom: 10px solid #F28B52;
+    line-height: 95px
+  }
+  .nancyProfile {
+    margin-top: 60px;
+  }
+
+  .teacherName {
+    padding-top: 30px;
+    text-align: center;
+  }
+
+  .teachers h1 {
+    margin: 0 auto;
+  }
+
+ .nancyPhotoTitle {
+   background-color: #00d6b2;
+   height: 150px;
+ }
+
+.nancyProfile img {
+  float: left;
+}
+
+  .nancyProfile {
+    margin-top: 20px;
+    text-align: justify;
+    .nancy-content {
+      clear: both;
+      height: 175px;
+      padding: 5px 8px;
+      background-color: #EDEDED;
+      h4 {
+        margin: 0;
+        text-align: center;
+      }
+    }
+  }
+
+  .barbPhotoTitle {
+    background-color: #00d6b2;
+    height: 150px;
+  }
+  .barbProfile img {
+    float: left;
+  }
+  .barbProfile {
+    margin-top: 20px;
+    text-align: justify;
+    .barb-content {
+      clear: both;
+      height: 175px;
+      padding: 5px 8px;
+      background-color: #EDEDED;
+      h4 {
+        margin: 0;
+        text-align: center;
+      }
+    }
+  }
 }
