@@ -2,6 +2,8 @@
 // generator-webapp 1.1.2
 'use strict';
 
+var mwpsRouter = require('./server/router');
+
 // # Globbing
 // for performance reasons we're only matching one level down:
 // 'test/spec/{,*/}*.js'
@@ -95,6 +97,7 @@ module.exports = function (grunt) {
           port: 9000,
           server: {
             baseDir: ['.tmp', config.app],
+            middleware: [mwpsRouter],
             routes: {
               '/bower_components': './bower_components'
             }
@@ -407,8 +410,6 @@ module.exports = function (grunt) {
       ]
     }
   });
-
-
 
   grunt.registerTask('serve', 'start the server and preview your app', function (target) {
 
