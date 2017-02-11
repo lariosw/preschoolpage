@@ -1,14 +1,61 @@
 .section-schedule{
-  h1 {
-    color: #C7C7C7;
+  margin: 0 !important;
+  display: block;
+
+  .classTitle {
+    width: 200px;
+    font-size: 20px;
+    color: #EDEDED;
     text-align: center;
+    margin: 0 auto;
+    overflow: hidden;
     border-bottom: 10px solid #F28B52;
-    line-height: 95px;
-    margin-top: 60px;
-    margin-bottom: 20px;
+    /*line-height: 95px;*/
+    //margin-top: 60px;
+    //margin-bottom: 25px;
+  }
+
+  .classTime {
+    margin-top: 15px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .time-schedule {
+    height: 350px;
+    background-color: #787878;
+    ul {
+      padding-left: 0;
+      padding-top: 20px !important;
+      li {
+
+        list-style: none;
+        text-align: center;
+      }
     }
-    h3 {
-      margin-top: 150px;
+  }
+
+  iframe {
+    width: 700px;
+    height: 300px;
+    margin: 20px 200px 0 200px;
+  }
+  .scheduleItems {
+    //margin-top: 20px;
+    //padding: 0;
+    //clear: both;
+    ul {
+     // margin-top: 20px;
+      //padding-bottom: 10px;
+
     }
+  }
+
+  .learningPict {
+    //margin-top: 20px;
+    //padding: 0;
+    float: right;
+  }
+
 
 }

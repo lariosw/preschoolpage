@@ -14,11 +14,19 @@ $main-color: green;
 @import "teachers";
 @import "tuition";
 
+body {
+  padding-top: 121px;
+}
 .navbar {
   background-color: #008080;
   color: white;
   font-size: 20px;
   margin-bottom: 0 !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000000;
 }
 .navbar-logo {
   padding-left: 50px;
@@ -54,31 +62,10 @@ $main-color: green;
 }
 
 .content-wrapper {
-  margin: 0 200px;
+
 }
 
 /* to do remove */
-
-div.schedule {
-  clear: both;
-  margin: 0 auto;
-  width: 400px;
-  h1 {
-    float: left;
-  }
-
-  div.time-schedule {
-    width: 600px;
-    h3 {
-      clear: both;
-    }
-    ul li {
-      list-style: none !important;
-      text-align: center;
-      margin: 5px;
-    }
-  }
-}
 
 .calendar {
 
@@ -103,33 +90,6 @@ h1{
 
 .classHours {
   font-size: 20px;
-}
-.dailyMore {
-  font-weight: 500;
-}
-
-.dayExplanation {
-  border: 2px solid black;
-  width: 600px;
-}
-
-.extendedSchedule {
-  font-size: 20px;
-}
-
-.extendedMore {
-  margin-top: 15px;
-  font-weight: 500;
-}
-
-.extendedExplanation {
-  border: 2px solid black;
-  width: 600px;
-}
-
-.registrationInfo {
-  margin-top: 20px;
-  text-align: center;
 }
 
 

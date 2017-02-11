@@ -1,3 +1,53 @@
-.section-contact{
-  background: $main-color;
+.section-contact {
+    margin: 0 100px;
+  h1 {
+    color: #C7C7C7;
+    text-align: center;
+    border-bottom: 10px solid #F28B52;
+    line-height: 95px;
+    margin-bottom: 40px;
+  }
+.inquiries {
+  text-align: center;
+}
+ .map iframe {
+   width: 600px;
+   height: 400px;
+ }
+
+  .contactLinks {
+    background-color:#787878;
+    width: 250px;
+    float: right;
+    padding: 0;
+    ul {
+      width: 250px;
+      padding-left: 0;
+    }
+    li {
+      list-style: none;
+      margin: 40px 0;
+      padding-right: 10px;
+      text-align: center;
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 5px;
+    }
+    .email img {
+      width: 40px;
+      height: 40px;
+    }
+    .Phone img {
+      width: 40px;
+      height: 40px;
+    }
+    .maplePresChurch img {
+      width: 80px;
+      height: 80px;
+
+    }
+  }
 }

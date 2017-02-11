@@ -1,3 +1,51 @@
 .section-tuition{
+  margin: 100px 200px 0 200px;
 
+  h1 {
+    color: #C7C7C7;
+    text-align: center;
+    border-bottom: 10px solid #F28B52;
+    line-height: 95px
+  }
+  h3 {
+    text-align: center;
+    margin: 15px 0;
+  }
+
+  .dailyMore {
+    font-weight: 500;
+  }
+
+  .dayExplanation {
+    border: 2px solid black;
+    display:none;
+  }
+
+  .extendedSchedule {
+    font-size: 20px;
+  }
+
+  .extendedMore {
+    margin-top: 15px;
+    font-weight: 500;
+  }
+
+  .extendedExplanation {
+    border: 2px solid black;
+    display:none;
+  }
+
+  .registrationInfo {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .tuitionToggleBtn {
+    &.showBtn {
+      display: inline-block;
+    }
+    &.hideBtn{
+      display: none;
+    }
+  }
 }
