@@ -1,5 +1,13 @@
 .section-home{
-  margin: 0 200px;
+  margin: 0 100px;
+  .homepagePhoto  {
+    margin-bottom:10px;
+    text-align: center;
+
+    img {
+      width: 75%;
+    }
+  }
   .missionStatement {
     clear: both;
     /*margin: 15px 275px 50px 275px;*/
@@ -14,8 +22,5 @@
 
   }
 
-  .homepageCarousel {
-    min-width: 100%;
-    max-width: 60%;
-  }
+
 }

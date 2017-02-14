@@ -1,5 +1,5 @@
 .section-teachers{
-  margin: 0 200px 100px 200px;
+  margin: 0 100px 100px 200px;
   h1 {
     color: #C7C7C7;
     text-align: center;
@@ -26,6 +26,8 @@
  }
 
 .nancyProfile img {
+  width: 135px;
+  height: 150px;
   float: left;
 }
 
@@ -51,6 +53,8 @@
   }
   .barbProfile img {
     float: left;
+    width: 135px;
+    height: 150px;
   }
   .barbProfile {
     margin-top: 20px;
