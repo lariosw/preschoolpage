@@ -31,9 +31,8 @@ router.get('/api/settings', function(req, res){
 });
 
 router.post('/api/contact', function(req, res){
-    console.log(req);
-    mwpsApi.sendContactEmail(req.body.name, "larios@domain", "618-8972", "Please respond").done(function(settings){
-        res.send(settings)
+    mwpsApi.sendContactEmail(req.body.name, "larios@domain", "618-8972", "Please respond").done(function(emailResponse){
+        handleSuccess(res, 'Successfully Sent!');
     }, function(err){
         res.status(500).send('Failed to send email');
     });

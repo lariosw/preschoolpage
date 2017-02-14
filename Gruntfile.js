@@ -2,7 +2,7 @@
 // generator-webapp 1.1.2
 'use strict';
 
-var mwpsRouter = require('./server/router');
+var mwpsRouter = require('./server/server');
 
 // # Globbing
 // for performance reasons we're only matching one level down:

@@ -30,7 +30,7 @@ var settings = {
 
     configSheet : {
         ID: "1RMk1xu0EFccTx2vQNeRuDRbqZVFIjAf5UMar5RHfrxg",
-        RANGES: "A2:B100" //skip first row, it is a header row
+        RANGES: "A2:B30" //skip first row, it is a header row
     },
 
     contactEmail: {
@@ -88,13 +88,18 @@ function jwtAuthorize(scopes){
 }
 
 function sendContactEmail(name, email, phoneNum, message){
+
+    function buildSpan(name, value){
+        return "<span style='font-weight:bold'>" + name + ":   </span>" + (value ? value : "(Not Provided)") + "<br/><br/>";
+    }
+
     return new promise(function(fullfil, reject) {
         //build message body
         var emailBody = "<span>The following information was typed in:</span><br/><br/>";
-        emailBody += "<span style='font-weight:bold'>Name:   </span>" + name + "<br/><br/>";
-        emailBody += "<span style='font-weight:bold'>Email:   </span>" + email + "<br/><br/>";
-        emailBody += "<span style='font-weight:bold'>Phone Number:   </span>" + (phoneNum ? phoneNum : "(Not Provided)") + "<br/><br/>";
-        emailBody += "<span style='font-weight:bold'>Message:   </span>" + message + "<br/><br/>";
+        emailBody += buildSpan("Name", name);
+        emailBody += buildSpan("Email", email);
+        emailBody += buildSpan("Phone Number", phoneNum);
+        emailBody += buildSpan("Message", message);
 
         //initialize server
         var server = emailJS.server.connect({
