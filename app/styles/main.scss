@@ -15,7 +15,9 @@ $main-color: green;
 @import "tuition";
 
 body {
-  padding-top: 121px;
+ a {
+   display:block;
+ }
 }
 .navbar {
   background-color: #008080;
@@ -52,36 +54,61 @@ body {
     font-weight: 500;
   }
 }
-
-.content-wrapper {
-
-}
-
-/* to do remove */
-
-.calendar {
-
-}
-
-.tuition {
-  clear: both;
-}
-h1{
-  margin: 0 auto;
-  width: 400px;
-}
-
-.Rates {
-  border: 2px solid black;
-  width: 400px;
-  ul li {
-
-    list-style: none;
+.footer {
+  .contact-container {
+    margin-top: 20px;
   }
+
+  .contactLinks {
+    text-align: center;
+    background-color:#787878;
+    width: 100%;
+    padding: 10px 20px 40px 20px;
+    ul {
+      width: 100%;
+      padding-left: 0;
+      margin: 0 auto;
+    }
+    li {
+      list-style: none;
+      margin: 0px 25px;
+      padding-right: 10px;
+      text-align: center;
+      display: inline-block;
+    }
+
+    .emailIcon {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 5px;
+    }
+    .email img {
+      width: 40px;
+      height: 40px;
+    }
+    .Phone img {
+      width: 40px;
+      height: 40px;
+    }
+    .maplePresChurch img {
+      width: 75px;
+      height: 75px;
+
+    }
+  }
+
+}
+.emailForm{
+  padding: 0 15px;
 }
 
-.classHours {
-  font-size: 20px;
+.header-spacing {
+  height: 112px;
 }
 
 

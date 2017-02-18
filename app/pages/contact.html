@@ -1,29 +1,43 @@
-<section class="row section-contact">
-  <a name="contact"></a>
+<section class="section-contact">
+  <div class="header-spacing">
+    <a name="contact"></a>
+  </div>
   <h1>
     Contact Us
   </h1>
 
-  <div class="inquiries  col-xs-12 col-sm-12 col-md-6 col-lg-6">
-    <div class="address">
-    We are located at
-    19523 84th Avenue W
-    Edmonds, WA  98026
-      <div class="map">
+  <div class="row inquiry-container">
+    <div class="directions col-xs-12 col-sm-6">
+      <div class="address">
+      We are located at
+      19523 84th Avenue W
+      Edmonds, WA  98026
+      </div>
+      <div class="map-responsive">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2678.91055788428!2d-122.34809994928149!3d47.82195077909745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54901ad095b9be1b%3A0xad6a740d6a7d44f2!2sMaplewood+Preschool!5e0!3m2!1sen!2sus!4v1483434783609"
                 width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
     </div>
-    <div>
-      <span>**************</span>
-      <form id="contactPageForm">
-        <span>name</span><input type="text" name="name" />
-        <input type="submit"/>
+
+    <div class="emailForm col-xs-12 col-sm-6">
+      <span>
+      <form id="contactInput">
+        <span>Name: </span><input type="text" name="name" />
       </form>
 
+      <form id="emailInput">
+        <span>Email Address: </span><input type="text" name="email" />
+      </form>
 
-      <span>**************</span>
+      <form id="messageInput">
+        <span>Message: </span><input type="text" name="message" />
+        <input type="Submit"/>
+      </form>
+      </span>
     </div>
+  </div>
+
+
     <!--
     <iframe class="airtable-embed" src="https://airtable.com/embed/shrg2bcPMJzkV01kz?backgroundColor=pink" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;">
     </iframe>
@@ -31,32 +45,6 @@
 
   </div>
 
-  <div class="contactLinks col-xs-12 col-sm-12 col-md-6 col-lg-6">
-    <ul>
-      <li>
-        <div class="email">
-          <a class="emailIcon" href="mailto:maplewoodpreschooledmonds@gmail.com?Subject=Preschool Inquiry" target="_top"><img src="images/emailIcon.png"></a>
-          <p>Preschool@Maplewoodpres.org</p>
-        </div>
-      </li>
-      <li>
-        <div class="Phone">
-          <a href="tel:14257785248"><img src="images/callIcon.png"></a>
-          <p>Phone:(425)-778-5248 Ext. 5</p>
-        </div>
-      </li>
-      <li>
-        <a class="facebookIcon" href="https://www.facebook.com/Nancnbarb/"><img src="images/Facebook.png"></a>
-      </li>
-      <li>
-        <a class="instagramIcon" href=""><img src="images/Instagram.png"></a>
-      </li>
-      <li>
-        <div class="maplePresChurch">
-          <a href="http://www.maplewoodpres.org/"><img src="images/maplewoodPresIcon.png" alt="church"></a>
-        </div>
-      </li>
-    </ul>
-  </div>
+
 
 </section>
