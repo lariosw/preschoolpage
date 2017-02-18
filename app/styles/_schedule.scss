@@ -1,7 +1,9 @@
 .section-schedule{
   margin: 0 !important;
   display: block;
-
+  .header-spacing {
+    height: 112px;
+  }
   .classTitle {
     width: 200px;
     font-size: 20px;
@@ -35,7 +37,7 @@
     }
   }
 .calendar{
-  margin: 0 100px;
+  margin: 25px 100px 0 100px;
   iframe {
     width: 100%;
   }

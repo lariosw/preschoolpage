@@ -1,13 +1,15 @@
 .section-teachers{
-  margin: 0 100px 100px 200px;
+  margin: 0 50px 50px 50px;
+  .header-spacing {
+    height: 112px;
+  }
   h1 {
     color: #C7C7C7;
     text-align: center;
     border-bottom: 10px solid #F28B52;
-    line-height: 95px
-  }
-  .nancyProfile {
-    margin-top: 60px;
+    margin: 0 auto;
+    line-height: 95px;
+    width: 450px;
   }
 
   .teacherName {
