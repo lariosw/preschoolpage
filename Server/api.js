@@ -5,7 +5,7 @@
 
 var google = require('googleapis');
 var googleSheets = google.sheets('v4');
-var gogleCalendar = google.calendar('v3');
+//var googleCalendar = google.calendar('v3');
 var promise = require('promise');
 var emailJS   = require("emailjs/email");
 

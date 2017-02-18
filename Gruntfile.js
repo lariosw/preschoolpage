@@ -23,7 +23,9 @@ module.exports = function (grunt) {
   // Configurable paths
   var config = {
     app: 'app',
-    dist: 'dist'
+    dist: 'dist/html',
+    server: 'server',
+    serverDist: 'dist',
   };
 
   // Define the configuration for all the tasks
@@ -33,7 +35,7 @@ module.exports = function (grunt) {
     config: config,
 
     htmlrender: {
-      build: {
+      server: {
         options: {
           src: ['<%= config.app %>/pages/*.html', '<%= config.app %>/index.html']
         },
@@ -42,6 +44,20 @@ module.exports = function (grunt) {
           cwd: '<%= config.app %>',
           src: ['index.html'],
           dest: '.tmp',
+          ext: '.html'
+        }]
+
+      },
+      dist: {
+        /* ML: requires that all files exist in dist directory including the partial pages */
+        options: {
+          src: ['<%= config.dist %>/pages/*.html', '<%= config.dist %>/index.html']
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= config.dist %>',
+          src: ['index.html'],
+          dest: '<%= config.dist %>',
           ext: '.html'
         }]
       },
@@ -96,7 +112,7 @@ module.exports = function (grunt) {
           ],
           port: 9000,
           server: {
-            baseDir: ['.tmp', config.app],
+            baseDir: ['.tmp', '<%= config.app %>'],
             middleware: [mwpsRouter],
             routes: {
               '/bower_components': './bower_components'
@@ -133,12 +149,13 @@ module.exports = function (grunt) {
           dot: true,
           src: [
             '.tmp',
-            '<%= config.dist %>/*',
+            '<%= config.serverDist %>/**',
             '!<%= config.dist %>/.git*'
           ]
         }]
       },
-      server: '.tmp'
+      server: '.tmp',
+      pages: '<%= config.dist %>/pages'
     },
 
     // Make sure code styles are up to par and there are no obvious mistakes
@@ -372,6 +389,16 @@ module.exports = function (grunt) {
           cwd: '.',
           src: 'bower_components/bootstrap-sass/assets/fonts/bootstrap/*',
           dest: '<%= config.dist %>'
+        },{
+          expand: true,
+          dot: true,
+          cwd: '<%=config.server%>',
+          dest: '<%=config.serverDist%>',
+          src:[
+              'node_modules/**',
+              'api.js',
+              'server.js'
+          ]
         }]
       }
     },
@@ -419,7 +446,7 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
-      'htmlrender',
+      'htmlrender:server',
       'wiredep',
       'concurrent:server',
       'postcss',
@@ -461,9 +488,11 @@ module.exports = function (grunt) {
     'modernizr',
     'filerev',
     'usemin',
-    'htmlmin'
+    'htmlrender:dist',
+    'htmlmin',
+    'clean:pages'
   ]);
-
+  
   grunt.registerTask('default', [
     'newer:eslint',
     'test',

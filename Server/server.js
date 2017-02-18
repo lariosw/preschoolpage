@@ -1,23 +1,6 @@
-/*var express = require('express');
-var bodyParser = require('body-parser');
-var router = require('./router');
-var app = express();
-
-
-
-app.use(bodyParser.json()); // support json encoded bodies
-app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
-app.use('/', router);
-
-if (require.main === module) {
-    //only listen if loaded directly
-    app.listen(3000, function () {
-        console.log('Example app listening on port 3000!')
-    })
-}
-
-module.exports = app;
-*/
+/*
+* Server to handle api calls
+ */
 
 var express = require('express');
 var bodyParser = require('body-parser');
@@ -27,7 +10,6 @@ var app = express();
 //set encoding for request bodies
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
-
 
 //setup routes
 app.get('/api/settings', function(req, res){
@@ -60,12 +42,15 @@ function handleFailure(res, data){
     }
 }
 
-//Setup listener
-if (require.main === module) {
-    //only initialize listener if loaded directly
+if(process.argv.length > 2 && process.argv[2] === '--listen'){
     app.listen(3000, function () {
         console.log('MWPS Api listening on port 3000!')
-    })
+    });
+}
+
+if(process.argv.length > 3 && process.argv[3] === '--static'){
+    app.use(express.static(__dirname + '/../dist/html'));
+    app.use(express.static('dist'));
 }
 
 module.exports = app;
