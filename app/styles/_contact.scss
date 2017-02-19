@@ -1,15 +1,4 @@
 .section-contact {
-  .header-spacing {
-    height: 112px;
-  }
-  h1 {
-    color: #C7C7C7;
-    text-align: center;
-    border-bottom: 10px solid #F28B52;
-    line-height: 95px;
-    margin: 0 auto;
-    width: 450px;
-  }
   .map-responsive{
     margin: 0 auto;
     overflow:hidden;
@@ -29,7 +18,7 @@
       margin: 40px 0 20px 0;
   }
 
-  .emailForm {
-
+  .emailForm{
+    padding: 0 15px;
   }
 }

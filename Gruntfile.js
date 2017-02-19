@@ -492,7 +492,7 @@ module.exports = function (grunt) {
     'htmlmin',
     'clean:pages'
   ]);
-  
+
   grunt.registerTask('default', [
     'newer:eslint',
     'test',

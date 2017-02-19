@@ -118,7 +118,7 @@ debugger;
 
       if(clickedButton.hasClass('schoolDayBtn')) {
         //toggle details
-        $(".dayExplanation").toggle(1000);
+        $(".dayExplanation").slideToggle(1000);
         //show corresponding buton
         if (clickedButton.hasClass('showBtn')) {
           $(".schoolDayBtn.hideBtn").show();
@@ -131,7 +131,7 @@ debugger;
       }
       else {
         //toggle details
-        $(".extendedExplanation").toggle(1000);
+        $(".extendedExplanation").slideToggle(1000);
         if (clickedButton.hasClass('showBtn')) {
           $(".extDayBtn.hideBtn").show();
           clickedButton.hide();

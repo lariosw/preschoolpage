@@ -19,41 +19,46 @@ body {
    display:block;
  }
 }
-.navbar {
-  background-color: #008080;
-  color: white;
-  font-size: 20px;
-  margin-bottom: 0 !important;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000000;
-}
-.navbar-logo {
-  padding-left: 50px;
-  img {
-    padding-right: 10px;
-    width: 70px;
-    height: 50px;
+
+.site-header{
+  .navbar {
+    background-color: #008080;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 0 !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000000;
+  }
+
+  .navbar-logo {
+    padding-left: 50px;
+    img {
+      padding-right: 10px;
+      width: 70px;
+      height: 50px;
+    }
+  }
+
+  .navbar-header {
+    padding: 10px;
+  }
+  .navbar-collapse {
+    padding-top: 75px;
+  }
+  .navbar-nav {
+    margin-top: -29px;
+    padding: 7px;
+    font-size: 15px;
+    li a {
+      color: black !important;
+      font-weight: 500;
+    }
   }
 }
 
-.navbar-header {
-  padding: 10px;
-}
-.navbar-collapse {
-  padding-top: 75px;
-}
-.navbar-nav {
-  margin-top: -29px;
-  padding: 7px;
-  font-size: 15px;
-  li a {
-    color: black !important;
-    font-weight: 500;
-  }
-}
 .footer {
   .contact-container {
     margin-top: 20px;
@@ -103,181 +108,39 @@ body {
   }
 
 }
-.emailForm{
-  padding: 0 15px;
-}
 
 .header-spacing {
   height: 112px;
 }
 
-
-/*
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-*/
-/* Space out content a bit */
-/*body {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}*/
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
-/*.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}*/
-
-/* Custom page header */
-/*.header {
-  border-bottom: 1px solid #e5e5e5;
-*/
-  /* Make the masthead heading the same height as the navigation */
-/*  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
-}*/
-
-/* Custom page footer */
-/*.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}*/
-
-/*.container-narrow > hr {
-  margin: 30px 0;
-}
-*/
-/* Main marketing message and sign up button */
-/*.jumbotron {
+h1.section-title{
+  color: #C7C7C7;
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
-}*/
-
-/* Supporting marketing content */
-/*.marketing {
-  margin: 40px 0;
-  p + h4 {
-    margin-top: 28px;
-  }
-}*/
-
-/* Responsive: Portrait tablets and up */
-/*@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }*/
-
-  /* Remove the padding we set earlier */
-/*  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  /* Space out the masthead */
- /* .header {
-    margin-bottom: 30px;
-  }*/
-
-  /* Remove the bottom border on the jumbotron for visual effect */
-/*  .jumbotron {
-    border-bottom: 0;
-  }
-}*/
-
-/*.navbar{
-  .navbar-nav {
-    margin-top:50px;
-  }
-  .navbar-logo{
-    background-color: green;
-    width: 250px;
-    max-width: 300px;
-    margin-right: 482px;
-    padding-top: 8px;
-  font-size: 150%;
-    height: 50px;
-    word-break: normal;
-  }
-}*/
-
-/*.navbar-header {
-  max-width: 1500px;
-
+  border-bottom: 10px solid #F28B52;
+  margin: 0 auto;
+  line-height: normal;
+  padding-bottom:15px;
+  width: 450px;
 }
 
-.container {
-  max-width: 1500px;
-  margin-right: 0 !important;
-  margin-left: 0 !important;
-  background-color: purple;
-}
-
-.navbar-nav li {
-  float: right;
-  background-color: #5e5c5c;
-  .nav li {
-    display: inline;
-    list-style: none;
-    margin: 10px
+@media (max-width: $screen-sm) {
+  h1.section-title{
+    max-width: 90%;
   }
 }
 
-.navbar .container {
-  margin-right:0 !important;
-  margin-left: 0 !important;
-}
+@media (max-width: $screen-xs) {
+  .site-header {
+    .navbar-logo {
+      padding-left:5px;
+    }
+  }
+  h1.section-title{
+    width: 100%;
+    font-size:20px;
+  }
 
-
-
-
-
-body {
-  padding-top: 0px !important;
-}
-.homepage .main-header h1 {
-margin: 30px 30px;
-}
-
-.header {
-  margin: 0 !important;
-}
-.container {
-  margin: 0 !important;
-}
-.navbar-nav li {
-  background-color: #5e5c5c;
-  float: right;
-  .nav li {
-    display: inline;
-    list-style: none;
-    margin: 10px;
-
+  h3{
+    font-size: 16px;
   }
 }
-
-.navbar-header {
-  background-color: deepskyblue;
-  width: 275px;
-  height: 150px;
-  font-height: 10px;
-  float: left;
-}
-*/
-

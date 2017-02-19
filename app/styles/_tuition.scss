@@ -1,17 +1,8 @@
-.section-tuition{
-  .header-spacing {
-    height: 112px;
-  }
-  margin: 100px 100px 0 100px;
+$tuition-section-width: 600px;
 
-  h1 {
-    color: #C7C7C7;
-    text-align: center;
-    border-bottom: 10px solid #F28B52;
-    line-height: 95px;
-    margin: 0 auto;
-    width: 450px;
-  }
+.section-tuition{
+  width: $tuition-section-width;
+  margin: 0 auto;
 
   h3 {
     text-align: center;
@@ -22,17 +13,21 @@
     font-weight: 500;
   }
 
-  .Rates {
+  .rates {
     min-width: 200px;
-    max-width: 600px;
     background-color: darkgrey;
     margin: 0 auto;
     box-shadow: 10px 10px 5px #888888;
+    .school-year-text{
+      text-decoration: underline;
+    }
     .rates-content {
       min-width: 200px;
-      max-width: 600px;
-      font-size: 20px;
+      font-size: 18px;
       padding: 5px 80px;
+      ul .setting{
+        font-size:20px;
+      }
     }
     .rates-timing {
       padding: 0 20px 10px 20px;
@@ -46,23 +41,23 @@
   .classHours {
     font-size: 20px;
     min-width: 200px;
-    max-width: 400px;
     margin: 25px auto;
     text-align: center;
+    padding:15px;
   }
 
-  .dayExplanation {
+  .explanation {
     background-color: #008080;
     color: white;
     display:none;
     font-size: 14px;
     margin-top: 5px;
+    padding:15px;
   }
 
   .extendedSchedule {
     font-size: 20px;
     min-width: 200px;
-    max-width: 600px;
     margin: 10px auto;
     text-align: center;
     p {
@@ -76,17 +71,13 @@
     font-weight: 500;
   }
 
-  .extendedExplanation {
-    background-color: #008080;
-    color: white;
-    display:none;
-    font-size: 14px;
-    margin-top: 5px;
-  }
 
   .registrationInfo {
     margin-top: 20px;
     text-align: center;
+    a {
+      display: inline-block;
+    }
   }
 
   .tuitionToggleBtn {
@@ -103,5 +94,19 @@
     }
   }
 
+  @media (max-width: $screen-sm) {
+    width: 90%;
+    .rates-content {
+      padding: 10px !important;
+      font-size:15px !important;
+      ul .setting{
+        font-size:17px !important;
+      }
+    }
+
+    .classHours, .extendedSchedule {
+      font-size: 16px;
+    }
+  }
 
 }

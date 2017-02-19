@@ -1,20 +1,13 @@
 .section-schedule{
   margin: 0 !important;
   display: block;
-  .header-spacing {
-    height: 112px;
-  }
-  .classTitle {
+
+  h1.section-title{
     width: 200px;
     font-size: 20px;
     color: #EDEDED;
-    text-align: center;
-    margin: 0 auto;
     overflow: hidden;
-    border-bottom: 10px solid #F28B52;
-    /*line-height: 95px;*/
-    //margin-top: 60px;
-    //margin-bottom: 25px;
+    padding: 10px 0 5px 0;
   }
 
   .classTime {
@@ -36,12 +29,13 @@
       }
     }
   }
-.calendar{
-  margin: 25px 100px 0 100px;
-  iframe {
-    width: 100%;
+
+  .calendar{
+    margin: 25px 100px 0 100px;
+    iframe {
+      width: 100%;
+    }
   }
-}
 
   .scheduleItems {
     //margin-top: 20px;
@@ -60,5 +54,12 @@
     float: right;
   }
 
-
+  @media (max-width: $screen-sm) {
+    .classTime {
+      font-size: 16px;
+    }
+    .calendar {
+      margin: 25px 5px 0 5px !important;
+    }
+  }
 }

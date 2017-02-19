@@ -1,16 +1,5 @@
 .section-teachers{
-  margin: 0 50px 50px 50px;
-  .header-spacing {
-    height: 112px;
-  }
-  h1 {
-    color: #C7C7C7;
-    text-align: center;
-    border-bottom: 10px solid #F28B52;
-    margin: 0 auto;
-    line-height: 95px;
-    width: 450px;
-  }
+  margin: 0 50px;
 
   .teacherName {
     padding-top: 30px;
@@ -21,17 +10,17 @@
     margin: 0 auto;
   }
 
- .nancyPhotoTitle {
-   background-color: #008080;
-   color: white;
-   height: 150px;
- }
+  .nancyPhotoTitle {
+     background-color: #008080;
+     color: white;
+     height: 150px;
+  }
 
-.nancyProfile img {
-  width: 135px;
-  height: 150px;
-  float: left;
-}
+  .nancyProfile img {
+    width: 135px;
+    height: 150px;
+    float: left;
+  }
 
   .nancyProfile {
     margin-top: 20px;
@@ -71,5 +60,15 @@
         text-align: center;
       }
     }
+  }
+
+  @media (max-width: $screen-md) {
+     .barb-content, .nancy-content {
+       height: auto !important;
+     }
+  }
+
+  @media (max-width: $screen-xs) {
+    margin: 0 20px 0 20px;
   }
 }
