@@ -397,7 +397,8 @@ module.exports = function (grunt) {
           src:[
               'node_modules/**',
               'api.js',
-              'server.js'
+              'server.js',
+              'util.js'
           ]
         }]
       }
