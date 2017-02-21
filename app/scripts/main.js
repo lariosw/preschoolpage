@@ -35,6 +35,10 @@ var mwpsApp = {
    // return settings;
   },
 
+  loadSiteImages: function(){
+
+  },
+
   updateSettingsOnPage: function(settings){
     //loop through the settings
     for(var x=0; x< settings.length; x++){
@@ -43,7 +47,7 @@ var mwpsApp = {
     }
   },
 
-  postContactForm: function(){
+  setupContactForm: function(){
     $('#contactPageForm').submit(function(event){
       debugger;
       //get form data as josn
@@ -153,5 +157,9 @@ $(document).ready(function() {
   //load the application settings
   mwpsApp.loadSiteSettings();
 
-  mwpsApp.postContactForm();
+  //load site images
+  mwpsApp.loadSiteImages();
+
+  //setup the contact form save functionality
+  mwpsApp.setupContactForm();
 });
