@@ -1,24 +1,58 @@
 .section-contact {
-  .map-responsive{
-    margin: 0 auto;
-    overflow:hidden;
-    padding-bottom:25%;
-    position:relative;
-    height:0;
-  }
-  .map-responsive iframe{
-    left:0;
-    top:0;
-    height:200px;
-    width:100%;
-    position:absolute;
-  }
-
-  .address {
-      margin: 40px 0 20px 0;
+  .directions {
+    clear: both;
+    .address {
+        margin: 30px 0 20px 20px;
+      width:75%;
+    }
+    .map-responsive{
+      overflow:hidden;
+      padding-bottom:25%;
+      position:relative;
+      height: 300px;
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+    .map-responsive iframe{
+      left:0;
+      top:0;
+      height:300px;
+      width:75%;
+      position:absolute;
+      box-shadow: 3px 3px 1px #888888;
+    }
   }
 
   .emailForm{
     padding: 0 15px;
+    span {
+      .contact-page-content {
+        margin: 5px 20px;
+      }
+      #contactPageForm {
+        margin-top: -40px;
+        margin-left: 30px;
+        width: 267px;
+        input {
+          margin-bottom: 7px;
+          width: 267px;
+          background-color:#DCDCDC;
+          color: darkgrey;
+          border:none !important;
+        }
+        .send-button {
+          color: white;
+          background-color: black;
+          width: 75px;
+          float: right;
+        }
+      }
+      textarea {
+        background-color:#DCDCDC;
+        color: darkgrey;
+        border:none !important;
+        margin-bottom: 7px;
+      }
+    }
   }
 }
