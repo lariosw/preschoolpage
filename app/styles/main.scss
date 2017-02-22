@@ -79,6 +79,12 @@ body {
     .social-links-container {
       margin: 10px 100px;
     }
+
+    @media (max-width: $screen-sm) {
+      .social-links-container {
+        margin: 10px auto;
+      }
+    }
     $break-small: 480px;
     .phone-number {
       color: white !important;
