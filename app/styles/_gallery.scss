@@ -1,0 +1,39 @@
+.section-gallery{
+
+  #gallery-imgs-container {
+    margin-top:15px;
+    width: 90%;
+    min-width:200px;
+    margin-left:5%;
+    .img-item{
+      background-position: center center;
+      background-size: 400px auto;
+      background-repeat: no-repeat;
+    }
+  }
+  @media (max-width: $screen-xs) {
+    #gallery-imgs-container{
+      .img-item{
+        background-size: 600px auto;
+      }
+    }
+  }
+}
+
+
+.lb-outerContainer{
+  width:70% !important;
+  height:auto !important;
+
+  .lb-image{
+    width: 100% !important;
+    height:auto !important;
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .lb-outerContainer {
+    width: 90% !important;
+  }
+}
+

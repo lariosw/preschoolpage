@@ -12,6 +12,7 @@
 
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
+  <link rel="stylesheet" href="/bower_components/lightbox2/dist/css/lightbox.css" />
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
@@ -46,6 +47,7 @@
           <ul class="nav navbar-nav">
             <li> <a href="#home">Home</a></li>
             <li> <a class="teachers" href="#teachers">Teachers</a></li>
+            <li> <a class="gallery" href="#gallery">Gallery</a></li>
             <li> <a class="schedule" href="#schedule">Schedule</a></li>
             <li> <a class="tuition" href="#tuition">Tuition</a></li>
             <li> <a class="contact" href="#contact">Contact</a></li>
@@ -62,7 +64,7 @@
     <!--Teachers Page-->
     <div class="header-spacing"><a name="teachers"></a></div>
     <%include src="pages/teachers.html"%>
-    <!--Gallery Page-->
+    <!--Photo Gallery Page-->
     <div class="header-spacing"><a name="gallery"></a></div>
     <%include src="pages/gallery.html"%>
     <!--Schedule Page-->
@@ -113,6 +115,8 @@
 <!-- build:js(.) scripts/vendor.js -->
 <!-- bower:js -->
 <script src="/bower_components/jquery/dist/jquery.js"></script>
+<script src="/bower_components/freewall/freewall.js"></script>
+<script src="/bower_components/lightbox2/dist/js/lightbox.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
