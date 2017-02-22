@@ -143,6 +143,7 @@ h1.section-title{
   width: 450px;
 }
 
+/* all toggle wrappers */
 .toggleWrapper {
   .toggleButtonWrapper{
     text-align:center;
@@ -159,6 +160,29 @@ h1.section-title{
     display:none;
   }
 }
+
+/* all modals */
+.modal-dialog {
+  margin-top:150px;
+  width: 350px;
+  .modal-header {
+    padding:0;
+  }
+  .modal-title {
+    display:none;
+  }
+  .close {
+    margin-right:5px;
+  }
+
+}
+
+/* validation */
+.error {
+  color:red;
+}
+
+/* global media queries */
 
 @media (max-width: $screen-sm) {
   h1.section-title{

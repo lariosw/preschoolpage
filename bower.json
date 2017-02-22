@@ -5,7 +5,8 @@
     "bootstrap-sass": "~3.3.5",
     "modernizr": "~2.8.3",
     "freewall": "^1.0.6",
-    "lightbox2": "^2.9.0"
+    "lightbox2": "^2.9.0",
+    "jquery-validation": "^1.16.0"
   },
   "overrides": {
     "bootstrap-sass": {

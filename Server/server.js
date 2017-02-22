@@ -31,7 +31,7 @@ app.get('/api/gallery', function(req, res){
 
 app.post('/api/contact', function(req, res){
     mwpsApi.sendContactEmail(req.body.name, req.body.email, req.body.phone, req.body.message).done(function(emailResponse){
-        handleSuccess(res, 'Successfully Sent!');
+        handleSuccess(res, emailResponse);
     }, function(err){
         handleFailure(res, 'Failed to send email');
     });

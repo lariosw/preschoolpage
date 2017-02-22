@@ -131,7 +131,6 @@ function getGalleryImages() {
     if(cachedData.gallery && cachedData.gallery.complete){
       //if data is already cached, return it and DON'T make call
       fullfil(cachedData.gallery);
-      console.log('already had the entire gally from beginning confirmed');
       return;
     }
     jwtAuthorize([settings.googleApiScopes.DRIVE_READONLY]).done(function(authtoken) {
@@ -167,13 +166,11 @@ function getGalleryImages() {
 
           //check if we already have all files
           if(filesToAddIds.length == 0){
-            console.log("had to check but all files are maked completed so good now");
             cachedData.gallery = cachedData.gallery || {};
             cachedData.gallery.complete = true;
             fullfil(cachedData.gallery);
             return;
           }
-        console.log('there is files to get :-(');
           //fns to handle image request
           function retryImage(fileId){
             if(filesToAdd[fileId].retries < settings.gallery.MAX_RETRIES){
@@ -192,7 +189,6 @@ function getGalleryImages() {
               }
               cachedData.gallery = galleryResp;
               cachedData.gallery.complete = allSuccessful;
-              console.log('all successful: ' + allSuccessful);
               fullfil(cachedData.gallery);
             }
           }
@@ -300,7 +296,7 @@ function sendContactEmail(name, email, phoneNum, message) {
       }]
     }, function(err, message) {
       if (err) reject(err);
-      else fullfil(message);
+      else fullfil({ msg: 'success'});
     });
   });
 }

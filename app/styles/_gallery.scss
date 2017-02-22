@@ -10,6 +10,12 @@
       background-size: 400px auto;
       background-repeat: no-repeat;
     }
+    .load-error {
+      color:red;
+      text-align: center;
+      width: 100%;
+      display: block;
+    }
   }
   @media (max-width: $screen-xs) {
     #gallery-imgs-container{

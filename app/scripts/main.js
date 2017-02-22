@@ -78,6 +78,7 @@ var mwpsApp = {
       $(window).trigger("resize");
 
     }).fail(function(err){
+      $('#gallery-imgs-container').html('<span class="load-error">Load error. Please try refreshing page</span>');
       //todo: handle error
     });
   },
@@ -91,65 +92,50 @@ var mwpsApp = {
   },
 
   setupContactForm: function(){
-    $('#contactPageForm').submit(function(event){
+    var self = this;
 
-      //get form data as josn
-      var $form = $(event.target);
-      var formData = {};
-      $.each($form.serializeArray(), function (i, field) {
-        formData[field.name] = field.value || "";
-      });
+    $("#contactPageForm").validate({
+      submitHandler: function(form) {
+        var $form = $(form),
+          $submitBtn = $form.find('input[type=submit]');
 
-      $.ajax({
-        type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
-        url         : 'api/contact', // the url where we want to POST
-        data        : formData, // our data object
-        dataType    : 'json', // what type of data do we expect back from the server
-        encode          : true
-      })
-      // using the done promise callback
-      .done(function(data) {
-        //todo: what to do when done?
-      });
+        //disable submit btn
+        $submitBtn.prop( "disabled", true );
 
-      // stop the form from submitting the normal way and refreshing the page
-      event.preventDefault();
+        //get form data as json
+        var formData = {};
+        $.each($form.serializeArray(), function (i, field) {
+          formData[field.name] = field.value || "";
+        });
+        $.ajax({
+            type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
+            url         : 'api/contact', // the url where we want to POST
+            data        : formData, // our data object
+            dataType    : 'json', // what type of data do we expect back from the server
+            encode          : true
+          })
+          .done(function(data) {
+            self.showModal('Thank you! We will contact you shortly.')
+            //enable submit btn
+            $submitBtn.prop( "disabled", false );
+          }).fail(function(){
+          self.showModal('Failed to send message. Please try again. If problem persists please contact us directly.')
+          //enable submit btn
+          $submitBtn.prop( "disabled", false );
+        });
+      }
     });
+  },
 
+  showModal: function(msg){
+    var $modal = $('#myModal');
+    $modal.find('p').html(msg);
+    $modal.modal('show');
+  },
 
-    /* $('#contactPageForm').formValidation({
-
-     })
-     .on('success.form.fv', function(e) {
-       debugger;
-
-
-       // Prevent form submission
-       e.preventDefault();
-
-       var $form = $(e.target),
-           fv    = $(e.target).data('formValidation');
-       var formData = JSON.stringify($form.serializeArray());
-
-       $.ajax({
-         type: "POST",
-         url: "/api/contact",
-         data: formData,
-         success: function(){
-           debugger;
-         },
-         error: function(){
-           debugger;
-         },
-         dataType: "json",
-         contentType : "application/json"
-       });
-
-       // Do whatever you want here ...
-
-       // Then submit the form as usual
-       //fv.defaultSubmit();
-     });*/
+  hideModal: function(){
+    var $modal = $('#myModal');
+    $modal.modal('hide');
   },
 
   registerEventHandlers: function(){
