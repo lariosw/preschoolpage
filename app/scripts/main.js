@@ -15,6 +15,18 @@ var mwpsApp = {
       {
         key: "threeDayCost",
         value:"$220"
+      },
+      {
+        key: "fourDayCost",
+        value:"$270"
+      },
+      {
+        key: "fiveDayCost",
+        value:"$310"
+      },
+      {
+        key: "lunchFee",
+        value:"$5"
       }
     ];
     //get settings and update page
@@ -22,7 +34,7 @@ var mwpsApp = {
       for(var i=0; i < data.settings.length;i++){
         for(var y=0; y < defaultSettings.length; y++){
           if(defaultSettings[y].key == data.settings[i].key && data.settings[i].value){
-              defaultSettings[y].value = data.settings[i].value;
+            defaultSettings[y].value = data.settings[i].value;
             break;
           }
         }
@@ -31,12 +43,43 @@ var mwpsApp = {
     }).fail(function(){
       self.updateSettingsOnPage(defaultSettings);
     });
-
-   // return settings;
   },
 
   loadSiteImages: function(){
+    var defaultItemHeight = "200",
+      defaultItemWidth = "200";
 
+    //get settings and update page
+    $.getJSON( "api/gallery", function( data ) {
+      var itemHtml = '<a href="{url}" data-lightbox="gallery-img">';
+      itemHtml += '<div class="img-item" style="background-image:url({url});height:' + defaultItemHeight + 'px;width:{width}px"></div>';
+      itemHtml += "</a>"
+      var allImagesHtml = "";
+      var w = 1;
+      //loop through images and build the html for each image
+      for (var i = 0; i < data.images.length; ++i) {
+        w = 200 +  200 * Math.random() << 0;
+        allImagesHtml += itemHtml.replace(/\{url\}/g, data.images[i]).replace(/\{width\}/g,w);
+      }
+      //append generated html into page
+      $('#gallery-imgs-container').html(allImagesHtml);
+      //initialize freewall plugin
+      var wall = new Freewall("#gallery-imgs-container");
+      wall.reset({
+        selector: '.img-item',
+        animate: true,
+        cellW: defaultItemWidth,
+        cellH: defaultItemHeight,
+        onResize: function() {
+          wall.fitWidth();
+        }
+      });
+      wall.fitWidth();
+      $(window).trigger("resize");
+
+    }).fail(function(err){
+      //todo: handle error
+    });
   },
 
   updateSettingsOnPage: function(settings){
@@ -49,7 +92,7 @@ var mwpsApp = {
 
   setupContactForm: function(){
     $('#contactPageForm').submit(function(event){
-      debugger;
+
       //get form data as josn
       var $form = $(event.target);
       var formData = {};
@@ -57,9 +100,6 @@ var mwpsApp = {
         formData[field.name] = field.value || "";
       });
 
-      /*var formData = {
-        name: 'Mister Larios'
-      };*/
       $.ajax({
         type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
         url         : 'api/contact', // the url where we want to POST
@@ -69,11 +109,7 @@ var mwpsApp = {
       })
       // using the done promise callback
       .done(function(data) {
-debugger;
-        // log data to the console so we can see
-        console.log(data);
-
-        // here we will handle errors and validation messages
+        //todo: what to do when done?
       });
 
       // stop the form from submitting the normal way and refreshing the page
@@ -117,33 +153,20 @@ debugger;
   },
 
   registerEventHandlers: function(){
-    $("button.tuitionToggleBtn").click(function() {
-      var clickedButton = $(this);
+    $('.toggleWrapper .toggleShowButton, .toggleWrapper .toggleHideButton').click(function(){
+      var $clickedButton = $(this),
+          $toggleWrapper = $clickedButton.parents('.toggleWrapper'),
+          $toggleContent = $toggleWrapper.find('.toggleContent');
 
-      if(clickedButton.hasClass('schoolDayBtn')) {
-        //toggle details
-        $(".dayExplanation").slideToggle(1000);
-        //show corresponding buton
-        if (clickedButton.hasClass('showBtn')) {
-          $(".schoolDayBtn.hideBtn").show();
-          clickedButton.hide();
-        }
-        else {
-          $(".schoolDayBtn.showBtn").show();
-          clickedButton.hide();
-        }
+      if($clickedButton.hasClass('toggleShowButton')) {
+        $toggleContent.slideToggle(1000);
+        $toggleWrapper.find('.toggleHideButton').show();
+        $clickedButton.hide();
       }
       else {
-        //toggle details
-        $(".extendedExplanation").slideToggle(1000);
-        if (clickedButton.hasClass('showBtn')) {
-          $(".extDayBtn.hideBtn").show();
-          clickedButton.hide();
-        }
-        else {
-          $(".extDayBtn.showBtn").show();
-          clickedButton.hide();
-        }
+        $toggleContent.slideToggle(1000);
+        $toggleWrapper.find('.toggleShowButton').show();
+        $clickedButton.hide();
       }
     });
   }
@@ -162,4 +185,13 @@ $(document).ready(function() {
 
   //setup the contact form save functionality
   mwpsApp.setupContactForm();
+
+  //lightbox configurations
+  lightbox.option({
+    'resizeDuration': 200,
+    'wrapAround': true,
+    fitImagesInViewport: false,
+    maxHeight: 100,
+    positionFromTop: 150,
+  })
 });

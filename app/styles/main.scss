@@ -13,6 +13,7 @@ $main-color: green;
 @import "schedule";
 @import "teachers";
 @import "tuition";
+@import "gallery";
 
 body {
  a {
@@ -140,6 +141,23 @@ h1.section-title{
   line-height: normal;
   padding-bottom:15px;
   width: 450px;
+}
+
+.toggleWrapper {
+  .toggleButtonWrapper{
+    text-align:center;
+    margin-top: 15px;
+  }
+  .toggleShowButton, .toggleHideButton{
+    display: inline-block;
+  }
+  .toggleHideButton{
+    display:none;
+  }
+
+  .toggleContent{
+    display:none;
+  }
 }
 
 @media (max-width: $screen-sm) {

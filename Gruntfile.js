@@ -490,7 +490,7 @@ module.exports = function (grunt) {
     'filerev',
     'usemin',
     'htmlrender:dist',
-    'htmlmin',
+    //'htmlmin',
     'clean:pages'
   ]);
 

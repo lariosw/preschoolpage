@@ -46,15 +46,6 @@ $tuition-section-width: 600px;
     padding:15px;
   }
 
-  .explanation {
-    background-color: #008080;
-    color: white;
-    display:none;
-    font-size: 14px;
-    margin-top: 5px;
-    padding:15px;
-  }
-
   .extendedSchedule {
     font-size: 20px;
     min-width: 200px;
@@ -80,17 +71,20 @@ $tuition-section-width: 600px;
     }
   }
 
-  .tuitionToggleBtn {
-    &.showBtn {
-      display: inline-block;
-    }
-    &.hideBtn{
-      display: none;
-    }
-  }
+
   .dailyMore {
     p {
       margin-bottom: 10px;
+    }
+  }
+
+  .toggleWrapper {
+    .toggleContent{
+      background-color: #008080;
+      color: white;
+      font-size: 14px;
+      margin-top: 5px;
+      padding:15px;
     }
   }
 

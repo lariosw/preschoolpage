@@ -46,10 +46,10 @@ var settings = {
 
   gallery: {
     FOLDER_ID: '0B18c97fJramUSzBiakQxMEw4MzA',
-    DEV_DIRECTORY: __dirname + '/../.tmp/html/images/galleryPhotos/',
-    DIST_DIRECTORY: "html/images/galleryPhotos/",
-    PROD_DIRECTORY: "html/images/galleryPhotos/",
-    RELATIVE_URL: "html/images/galleryPhotos/",
+    DEV_DIRECTORY: __dirname + '/../app/images/gallery/',
+    DIST_DIRECTORY: "html/images/gallery/",
+    PROD_DIRECTORY: "/var/www/maplewoodpres.com/html/images/gallery/",
+    RELATIVE_URL: "images/gallery/",
     MAX_RETRIES: 4
   },
 
@@ -122,14 +122,20 @@ function initGalleryFromFS(){
 function getGalleryImages() {
   var galleryDirectory = getGalleryDirectory();
 
+  if(!cachedData.gallery){
+    initGalleryFromFS();
+  }
+
   //setup promise
   return new promise(function(fullfil, reject) {
     if(cachedData.gallery && cachedData.gallery.complete){
       //if data is already cached, return it and DON'T make call
       fullfil(cachedData.gallery);
+      console.log('already had the entire gally from beginning confirmed');
       return;
     }
     jwtAuthorize([settings.googleApiScopes.DRIVE_READONLY]).done(function(authtoken) {
+
       var listRequest = {
         auth: authtoken,
         folderId: settings.gallery.FOLDER_ID
@@ -161,12 +167,13 @@ function getGalleryImages() {
 
           //check if we already have all files
           if(filesToAddIds.length == 0){
+            console.log("had to check but all files are maked completed so good now");
             cachedData.gallery = cachedData.gallery || {};
-            cachedData.gallery.completed = true;
+            cachedData.gallery.complete = true;
             fullfil(cachedData.gallery);
             return;
           }
-
+        console.log('there is files to get :-(');
           //fns to handle image request
           function retryImage(fileId){
             if(filesToAdd[fileId].retries < settings.gallery.MAX_RETRIES){
@@ -184,7 +191,7 @@ function getGalleryImages() {
                 if(filesToAdd.hasOwnProperty(fId) && !filesToAdd[fId].completed) allSuccessful = false;
               }
               cachedData.gallery = galleryResp;
-              cachedData.gallery.completed = allSuccessful;
+              cachedData.gallery.complete = allSuccessful;
               console.log('all successful: ' + allSuccessful);
               fullfil(cachedData.gallery);
             }
@@ -226,7 +233,6 @@ function getGalleryImages() {
     }, reject);
   });
 }
-
 
 function jwtAuthorize(scopes) {
   return new promise(function(fullfil, reject) {
@@ -316,3 +322,7 @@ module.exports.init = function(appMode){
   currentAppMode = appMode;
   initGalleryFromFS();
 };
+
+module.exports.resetCache = function(){
+  cachedData = {};
+}
