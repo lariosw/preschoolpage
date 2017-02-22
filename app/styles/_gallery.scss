@@ -26,6 +26,40 @@
   }
 }
 
+//button styles
+button {
+  display: inline-block;
+  width: 175px;
+  height: 50px;
+  margin: 0 10px 0 0;
+  padding: 10px 25px;
+  font-size: 15px;
+  font-family: inherit;
+  line-height: 1.8;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+button:focus {
+  outline: none
+}
+
+div.border button {
+  color: #F28B52;
+  background: rgba(0,0,0,0);
+  border: solid 5px #C7C7C7;
+}
+div.border button:hover,
+div.border button.hover {
+  border-color: #C7C7C7;
+  color: #F28B52;
+}
+div.border button:active,
+div.border button.active {
+  border-color: #C7C7C7;
+  color: #F28B52;
+}
 
 .lb-outerContainer{
   width:70% !important;

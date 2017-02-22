@@ -79,7 +79,6 @@ var mwpsApp = {
 
     }).fail(function(err){
       $('#gallery-imgs-container').html('<span class="load-error">Load error. Please try refreshing page</span>');
-      //todo: handle error
     });
   },
 
@@ -118,10 +117,12 @@ var mwpsApp = {
             self.showModal('Thank you! We will contact you shortly.')
             //enable submit btn
             $submitBtn.prop( "disabled", false );
+            //clear all previous input
+            $form.find('input:not([type=submit]), textarea').val('');
           }).fail(function(){
-          self.showModal('Failed to send message. Please try again. If problem persists please contact us directly.')
-          //enable submit btn
-          $submitBtn.prop( "disabled", false );
+            self.showModal('Failed to send message. Please try again. If problem persists please contact us directly.')
+            //enable submit btn
+            $submitBtn.prop("disabled", false );
         });
       }
     });
@@ -132,12 +133,7 @@ var mwpsApp = {
     $modal.find('p').html(msg);
     $modal.modal('show');
   },
-
-  hideModal: function(){
-    var $modal = $('#myModal');
-    $modal.modal('hide');
-  },
-
+  
   registerEventHandlers: function(){
     $('.toggleWrapper .toggleShowButton, .toggleWrapper .toggleHideButton').click(function(){
       var $clickedButton = $(this),

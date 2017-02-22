@@ -60,11 +60,3 @@ module.exports.arrayIntersect = function(array1, array2, startsWithMatch){
   }
   return intersect;
 };
-/*
-module.exports.ensureDirectoryExists(__dirname + '/../.tmp/testing/testin2/testing3/test.jpg');
-
-module.exports.getDirectoryFiles('photos/');
-*/
-
-//module.exports.deleteFile('photos/0B18c97fJramUaHE3OElXZ1F6Y0k.jpeg');
-//module.exports.deleteFile('photos/0B18c97fJramUbTdodWlMTGVXOGc.jpeg');

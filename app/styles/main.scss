@@ -65,18 +65,28 @@ body {
     margin-top: 20px;
   }
 
+
   .contactLinks {
     text-align: center;
-    background-color:#787878;
+    background-color: #787878;
     width: 100%;
-    padding: 10px 20px 40px 20px;
+    padding: 10px 20px 20px 20px;
     h3 {
       color: #F28B52;
       margin-bottom: 20px;
     }
+
     .social-links-container {
-      margin: 10px auto;
+      margin: 10px 100px;
     }
+    $break-small: 480px;
+    .phone-number {
+      color: white !important;
+      @media screen and (max-width: $break-small) {
+        display: none;
+      }
+    }
+
     ul {
       width: 100%;
       padding-left: 0;
@@ -108,41 +118,15 @@ body {
       width: 40px;
       height: 40px;
     }
-
-    .church {
-      margin-top: 15px;
-      a {
-        color: black !important;
-      }
-      img {
-        width: 75px;
-        height: 75px;
-        margin-left: 10px;
-      }
-    }
     .contact-numbers {
       margin-right: 10px;
       margin-top: 20px;
     }
 
   }
-
 }
 
-.header-spacing {
-  height: 112px;
-}
-
-h1.section-title{
-  color: #C7C7C7;
-  text-align: center;
-  border-bottom: 10px solid #F28B52;
-  margin: 0 auto;
-  line-height: normal;
-  padding-bottom:15px;
-  width: 450px;
-}
-
+<<<<<<< HEAD
 /* all toggle wrappers */
 .toggleWrapper {
   .toggleButtonWrapper{
@@ -154,13 +138,23 @@ h1.section-title{
   }
   .toggleHideButton{
     display:none;
+=======
+  .header-spacing {
+    height: 112px;
+>>>>>>> 10a11e83293328643280dc1ba1694315fec7fe3f
   }
 
-  .toggleContent{
-    display:none;
+  h1.section-title {
+    color: #C7C7C7;
+    text-align: center;
+    border-bottom: 10px solid #F28B52;
+    margin: 0 auto;
+    line-height: normal;
+    padding-bottom: 15px;
+    width: 450px;
   }
-}
 
+<<<<<<< HEAD
 /* all modals */
 .modal-dialog {
   margin-top:150px;
@@ -189,19 +183,44 @@ h1.section-title{
     max-width: 90%;
   }
 }
+=======
+  .toggleWrapper {
+    .toggleButtonWrapper {
+      text-align: center;
+      margin-top: 15px;
+    }
+    .toggleShowButton, .toggleHideButton {
+      display: inline-block;
+    }
+    .toggleHideButton {
+      display: none;
+    }
+>>>>>>> 10a11e83293328643280dc1ba1694315fec7fe3f
 
-@media (max-width: $screen-xs) {
-  .site-header {
-    .navbar-logo {
-      padding-left:5px;
+    .toggleContent {
+      display: none;
     }
   }
-  h1.section-title{
-    width: 100%;
-    font-size:20px;
+
+  @media (max-width: $screen-sm) {
+    h1.section-title {
+      max-width: 90%;
+    }
   }
 
-  h3{
-    font-size: 16px;
+  @media (max-width: $screen-xs) {
+    .site-header {
+      .navbar-logo {
+        padding-left: 5px;
+      }
+    }
+    h1.section-title {
+      width: 100%;
+      font-size: 20px;
+    }
+
+    h3 {
+      font-size: 16px;
+    }
   }
-}
+

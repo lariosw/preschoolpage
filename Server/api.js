@@ -58,7 +58,7 @@ var settings = {
     from: "maplewoodpreschooledmonds@gmail.com",
     subject: "Message from preschool website contact page",
     username: "maplewoodpreschooledmonds@gmail.com",
-    password: "Maplewood$123",
+    password: "",
     smtpHost: "smtp.gmail.com",
     useSSL: true,
     sslPort: 465
