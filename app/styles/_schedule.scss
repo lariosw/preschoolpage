@@ -19,6 +19,7 @@
   .time-schedule {
     height: 350px;
     background-color: #787878;
+    overflow:hidden;
     ul {
       padding-left: 0;
       padding-top: 20px !important;
@@ -38,19 +39,12 @@
   }
 
   .scheduleItems {
-    //margin-top: 20px;
-    //padding: 0;
-    //clear: both;
-    ul {
-     // margin-top: 20px;
-      //padding-bottom: 10px;
 
+    ul {
     }
   }
 
   .learningPict {
-    //margin-top: 20px;
-    //padding: 0;
     float: right;
   }
 
