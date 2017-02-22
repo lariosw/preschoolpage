@@ -126,35 +126,38 @@ body {
   }
 }
 
-<<<<<<< HEAD
-/* all toggle wrappers */
+.header-spacing {
+  height: 112px;
+}
+
+h1.section-title {
+  color: #C7C7C7;
+  text-align: center;
+  border-bottom: 10px solid #F28B52;
+  margin: 0 auto;
+  line-height: normal;
+  padding-bottom: 15px;
+  width: 450px;
+}
+
+  /* toggle wrappers */
 .toggleWrapper {
-  .toggleButtonWrapper{
-    text-align:center;
+  .toggleButtonWrapper {
+    text-align: center;
     margin-top: 15px;
   }
-  .toggleShowButton, .toggleHideButton{
+  .toggleShowButton, .toggleHideButton {
     display: inline-block;
   }
-  .toggleHideButton{
-    display:none;
-=======
-  .header-spacing {
-    height: 112px;
->>>>>>> 10a11e83293328643280dc1ba1694315fec7fe3f
+  .toggleHideButton {
+    display: none;
   }
 
-  h1.section-title {
-    color: #C7C7C7;
-    text-align: center;
-    border-bottom: 10px solid #F28B52;
-    margin: 0 auto;
-    line-height: normal;
-    padding-bottom: 15px;
-    width: 450px;
+  .toggleContent {
+    display: none;
   }
+}
 
-<<<<<<< HEAD
 /* all modals */
 .modal-dialog {
   margin-top:150px;
@@ -168,7 +171,6 @@ body {
   .close {
     margin-right:5px;
   }
-
 }
 
 /* validation */
@@ -177,38 +179,13 @@ body {
 }
 
 /* global media queries */
-
 @media (max-width: $screen-sm) {
-  h1.section-title{
+  h1.section-title {
     max-width: 90%;
   }
 }
-=======
-  .toggleWrapper {
-    .toggleButtonWrapper {
-      text-align: center;
-      margin-top: 15px;
-    }
-    .toggleShowButton, .toggleHideButton {
-      display: inline-block;
-    }
-    .toggleHideButton {
-      display: none;
-    }
->>>>>>> 10a11e83293328643280dc1ba1694315fec7fe3f
 
-    .toggleContent {
-      display: none;
-    }
-  }
-
-  @media (max-width: $screen-sm) {
-    h1.section-title {
-      max-width: 90%;
-    }
-  }
-
-  @media (max-width: $screen-xs) {
+@media (max-width: $screen-xs) {
     .site-header {
       .navbar-logo {
         padding-left: 5px;
