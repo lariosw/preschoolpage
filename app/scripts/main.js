@@ -133,7 +133,7 @@ var mwpsApp = {
     $modal.find('p').html(msg);
     $modal.modal('show');
   },
-  
+
   registerEventHandlers: function(){
     $('.toggleWrapper .toggleShowButton, .toggleWrapper .toggleHideButton').click(function(){
       var $clickedButton = $(this),
@@ -176,4 +176,11 @@ $(document).ready(function() {
     maxHeight: 100,
     positionFromTop: 150,
   })
+
+  //hide menu on body click
+  $(function() {
+    $(document).click(function (event) {
+      $('.navbar-collapse').collapse('hide');
+    });
+  });
 });

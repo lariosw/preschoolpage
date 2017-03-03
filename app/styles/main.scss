@@ -166,8 +166,13 @@ h1.section-title {
 
 /* all modals */
 .modal-dialog {
-  margin-top:150px;
+  margin:150px 0 0 0;
   width: 350px;
+  left:50%;
+  .modal-content {
+    position:relative;
+    left:-50%
+  }
   .modal-header {
     padding:0;
   }
@@ -189,21 +194,28 @@ h1.section-title {
   h1.section-title {
     max-width: 90%;
   }
+
+  .header-spacing {
+    height: 82px;
+  }
 }
 
 @media (max-width: $screen-xs) {
-    .site-header {
-      .navbar-logo {
-        padding-left: 5px;
-      }
-    }
-    h1.section-title {
-      width: 100%;
-      font-size: 20px;
-    }
-
-    h3 {
-      font-size: 16px;
+  .site-header {
+    .navbar-logo {
+      padding-left: 5px;
     }
   }
+  h1.section-title {
+    width: 100%;
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+  .modal-dialog{
+    width:80%;
+  }
+}
 
