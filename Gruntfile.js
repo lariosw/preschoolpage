@@ -23,9 +23,9 @@ module.exports = function (grunt) {
   // Configurable paths
   var config = {
     app: 'app',
-    dist: 'dist/html',
+    dist: 'dist/www',
     server: 'server',
-    serverDist: 'dist',
+    serverDist: 'dist/server',
   };
 
   // Define the configuration for all the tasks
@@ -149,6 +149,7 @@ module.exports = function (grunt) {
           dot: true,
           src: [
             '.tmp',
+            '<%= config.dist %>/**',
             '<%= config.serverDist %>/**',
             '!<%= config.dist %>/.git*'
           ]
@@ -396,9 +397,10 @@ module.exports = function (grunt) {
           dest: '<%=config.serverDist%>',
           src:[
               'node_modules/**',
+              'helpers/**',
               'api.js',
               'server.js',
-              'util.js'
+              'config.json'
           ]
         }]
       }

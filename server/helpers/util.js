@@ -9,7 +9,6 @@ module.exports.getDirectoryFiles = function(directory, nameOnly){
   var formattedFiles = [];
     for(var i=0; i<files.length;i++){
       if(files[i].indexOf('.') == 0) continue; //skip hidden files
-     // console.log(nameOnly ? files[i].substring(0, files[i].indexOf('.')+1) : files[i]);
       formattedFiles.push(nameOnly ? files[i].substring(0, files[i].indexOf('.')) : files[i]);
     }
   return formattedFiles;
