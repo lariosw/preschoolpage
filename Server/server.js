@@ -61,7 +61,7 @@ module.exports = app;
 mwpsApi.init("DEV");
 if (require.main === module) {
   if (process && process.argv && process.argv.length > 2) {
-    var apiPort = 3010;
+    var apiPort = 3000;
     appMode = process.argv[2].toString().replace('--', '').toUpperCase();
     if (!(appMode == 'DEV' || appMode == "DIST" || appMode == "PROD")) {
       console.log("Server listener not started. Argument DEV, DIST and PROD must be passed.");
