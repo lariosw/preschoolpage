@@ -1,0 +1,12 @@
+{
+  "appName": "maplewoodpreschool.com",
+  "appMode": "DEV",
+  "apiPort": "3000",
+  "permissions": {
+    "googleApiAccount": "",
+    "googleApiKey": "",
+    "mailerDestination": "",
+    "googleMailer": "",
+    "googleMailerPassword": ""
+  }
+}

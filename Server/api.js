@@ -25,14 +25,14 @@ var settings = {
     FOLDER_ID: '0B18c97fJramUSzBiakQxMEw4MzA',
     DEV_DIRECTORY: __dirname + '/../app/images/gallery/',
     DIST_DIRECTORY: __dirname + '/../www/images/gallery/',
-    PROD_DIRECTORY: "/var/www/maplewoodpres.com/www/images/gallery/",
+    PROD_DIRECTORY: "/var/www/maplewoodpreschool.org/www/images/gallery/",
     RELATIVE_URL: "images/gallery/",
     MAX_RETRIES: 4
   },
   contactEmail: {
-    TO: "maplewoodpreschooledmonds@gmail.com",
+    TO: "",
     SUBJECT: "Message from preschool website contact page",
-    USERNAME: "maplewoodpreschooledmonds@gmail.com",
+    USERNAME: "",
     PASSWORD: "",
   }
 };
@@ -107,11 +107,15 @@ module.exports.resetCache = function(){
   googleGalleryUtil.resetCache();
 }
 
+
+
 module.exports.init = function(appMode){
   //set app mode
   currentAppMode = appMode;
   //load config
-  settings.contactEmail.PASSWORD = appConfig.permissions.googleMailPassword;
+  settings.contactEmail.TO = appConfig.permissions.mailerDestination;
+  settings.contactEmail.USERNAME = appConfig.permissions.googleMailer;
+  settings.contactEmail.PASSWORD = appConfig.permissions.googleMailerPassword;
   googleApiUtil.setAuth(appConfig.permissions.googleApiAccount, appConfig.permissions.googleApiKey);
 };
 
