@@ -37,20 +37,20 @@
     }
   }
 
-  .barbPhotoTitle {
+  .dayanaPhotoTitle {
     background-color: #008080;
     color: white;
     height: 150px;
   }
-  .barbProfile img {
+  .dayanaProfile img {
     float: left;
     width: 135px;
     height: 150px;
   }
-  .barbProfile {
+  .dayanaProfile {
     margin-top: 20px;
     text-align: justify;
-    .barb-content {
+    .dayana-content {
       clear: both;
       height: 175px;
       padding: 5px 8px;
@@ -63,7 +63,7 @@
   }
 
   @media (max-width: $screen-md) {
-     .barb-content, .nancy-content {
+     .dayana-content, .nancy-content {
        height: auto !important;
      }
   }

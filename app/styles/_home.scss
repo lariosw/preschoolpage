@@ -1,12 +1,13 @@
 .section-home{
-  margin: 0 100px;
+  margin: 0 75px;
 
   .homepagePhoto  {
     margin-bottom:10px;
     text-align: center;
 
     img {
-      width: 75%;
+      width: 100%;
+      height: 440px;
     }
   }
   .missionStatement {
@@ -15,7 +16,78 @@
     text-align: justify;
     padding: 15px;
     box-shadow: 10px 10px 5px #888888;
-    background-color:#787878;
+    background-color: #787878;
+
+  }
+  .home-shortcut {
+    text-align: center;
+    background-color: #F28B52;
+    color: white;
+    margin-top: 20px;
+    padding: 25px;
+    font-size: 22px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  .homepage-shortcut {
+    .address {
+      background-color: #EDEDED !important;
+      color: black;
+      border: none;
+      padding-bottom: 10px;
+      font-size: 18px;
+    }
+    .meet-teachers {
+      margin-top: 40px;
+    }
+  }
+  .mission-wrapper {
+    margin-top: 40px;
+  }
+  .missionStatement {
+    margin-top: 30px;
+    p {
+      padding:10px;
+    }
+  }
+  .overlay-text {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    font-size: 18px;
+  }
+  .shortcut-link:hover {
+    text-decoration: none;
+  }
+  .shortcut-link:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+
+  @media (max-width: $screen-sm) {
+    margin: 0 20px 0 20px;
+
+    .home-shortcut {
+      text-align: center;
+      background-color: #F28B52;
+      color: white;
+      margin-top: 15px;
+      padding: 14px;
+      font-size: 16px;
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+      &.meet-teachers {
+        margin-top: 10px;
+      }
+    }
+    .mission-wrapper {
+      margin-top: 25px;
+    }
+    .homepagePhoto img {
+      height: 300px;
+    }
+
+
   }
 
   @media (max-width: $screen-xs) {
